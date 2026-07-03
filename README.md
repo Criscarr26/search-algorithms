@@ -253,3 +253,10 @@ Implementación de algoritmos de búsqueda para propósitos educativos.
 ---
 
 **¡Disfruta explorando algoritmos de búsqueda!** 🎯
+
+## Aplicaciones
+
+En [`aplicaciones/entrega_paquetes.ipynb`](aplicaciones/entrega_paquetes.ipynb)
+los algoritmos del paquete se aplican a un problema real: planificar la entrega
+de paquetes comparando estrategias de busqueda clasica. El notebook incluye los
+resultados ejecutados.
