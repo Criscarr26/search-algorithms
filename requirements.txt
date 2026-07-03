@@ -1,0 +1,15 @@
+# Requisitos del proyecto
+
+# No hay dependencias externas requieridas
+# El proyecto usa solo librerías estándar de Python:
+# - collections (deque)
+# - heapq (cola de prioridad)
+# - typing (anotaciones de tipo)
+# - time (medición de tiempo)
+
+# Las siguientes líneas son opcionales para desarrolladores
+# que quieran verificar la calidad del código:
+
+# pylint>=2.0.0  # Linter (opcional)
+# black>=22.0.0  # Formateador de código (opcional)
+# pytest>=7.0.0  # Framework de testing (opcional)
