@@ -1,113 +1,113 @@
-# Algoritmos de Búsqueda Desinformada
+# Uninformed Search Algorithms
 
-Implementación completa en Python de 5 algoritmos de búsqueda desinformada con casos de prueba, visualización y comparación.
+Complete Python implementation of 5 uninformed search algorithms with test cases, visualization and comparison.
 
-## 📋 Algoritmos Implementados
+## 📋 Implemented algorithms
 
-### 1. **BFS (Búsqueda Primero en Amplitud)**
-- **Archivo**: `algorithms/bfs.py`
-- **Estructura**: Cola (FIFO)
-- **Características**:
-  - ✓ Completa (encuentra solución si existe)
-  - ✓ Óptima (en términos de número de aristas)
-  - Uso: Encontrar el camino más corto en términos de pasos
+### 1. **BFS (Breadth-First Search)**
+- **File**: `algorithms/bfs.py`
+- **Structure**: Queue (FIFO)
+- **Properties**:
+  - ✓ Complete (finds a solution if one exists)
+  - ✓ Optimal (in terms of number of edges)
+  - Use: Find the shortest path in terms of steps
 
-### 2. **DFS (Búsqueda en Profundidad)**
-- **Archivo**: `algorithms/dfs.py`
-- **Estructura**: Pila (LIFO)
-- **Características**:
-  - ✓ Completa (en grafos finitos)
-  - ✗ NO óptima
-  - Uso: Exploración exhaustiva, detección de ciclos
+### 2. **DFS (Depth-First Search)**
+- **File**: `algorithms/dfs.py`
+- **Structure**: Stack (LIFO)
+- **Properties**:
+  - ✓ Complete (on finite graphs)
+  - ✗ NOT optimal
+  - Use: Exhaustive exploration, cycle detection
 
-### 3. **DLS (Búsqueda en Profundidad Limitada)**
-- **Archivo**: `algorithms/dls.py`
-- **Estructura**: Pila con límite de profundidad
-- **Características**:
-  - ✓ Completa si la solución está dentro del límite
-  - ✗ NO óptima
-  - Uso: Limitar búsqueda en grafos infinitos
+### 3. **DLS (Depth-Limited Search)**
+- **File**: `algorithms/dls.py`
+- **Structure**: Stack with a depth limit
+- **Properties**:
+  - ✓ Complete if the solution is within the limit
+  - ✗ NOT optimal
+  - Use: Limit search on infinite graphs
 
-### 4. **IDS (Profundización Iterativa)**
-- **Archivo**: `algorithms/ids.py`
-- **Estructura**: DLS repetido con límites incrementales
-- **Características**:
-  - ✓ Completa
-  - ✓ Óptima (combina ventajas de BFS y DFS)
-  - Uso: Espacios muy grandes donde BFS usa mucha memoria
+### 4. **IDS (Iterative Deepening Search)**
+- **File**: `algorithms/ids.py`
+- **Structure**: Repeated DLS with incremental limits
+- **Properties**:
+  - ✓ Complete
+  - ✓ Optimal (combines the advantages of BFS and DFS)
+  - Use: Very large spaces where BFS uses too much memory
 
-### 5. **UCS (Búsqueda de Costo Uniforme)**
-- **Archivo**: `algorithms/ucs.py`
-- **Estructura**: Cola de prioridad
-- **Características**:
-  - ✓ Completa
-  - ✓ Óptima en costo total
-  - Uso: Grafos ponderados, encontrar camino de menor costo
+### 5. **UCS (Uniform-Cost Search)**
+- **File**: `algorithms/ucs.py`
+- **Structure**: Priority queue
+- **Properties**:
+  - ✓ Complete
+  - ✓ Optimal in total cost
+  - Use: Weighted graphs, find the lowest-cost path
 
-## 📁 Estructura del Proyecto
+## 📁 Project structure
 
 ```
 search-algorithms/
-├── algorithms/           # Módulo con los algoritmos
+├── algorithms/           # Module with the algorithms
 │   ├── __init__.py
-│   ├── bfs.py           # Búsqueda en Amplitud
-│   ├── dfs.py           # Búsqueda en Profundidad
-│   ├── dls.py           # Búsqueda en Profundidad Limitada
-│   ├── ids.py           # Profundización Iterativa
-│   └── ucs.py           # Búsqueda de Costo Uniforme
+│   ├── bfs.py           # Breadth-First Search
+│   ├── dfs.py           # Depth-First Search
+│   ├── dls.py           # Depth-Limited Search
+│   ├── ids.py           # Iterative Deepening Search
+│   └── ucs.py           # Uniform-Cost Search
 │
-├── problems/            # Módulo con casos de prueba
+├── problems/            # Module with test cases
 │   ├── __init__.py
-│   ├── graph.py        # Clase Grafo
-│   └── test_cases.py   # Casos de prueba predefinidos
+│   ├── graph.py        # Graph class
+│   └── test_cases.py   # Predefined test cases
 │
-├── main.py             # Programa principal
-├── visualization.py    # Módulo de visualización
-├── requirements.txt    # Dependencias
-└── README.md          # Este archivo
+├── main.py             # Main program
+├── visualization.py    # Visualization module
+├── requirements.txt    # Dependencies
+└── README.md          # This file
 ```
 
-## 🚀 Instalación y Uso
+## 🚀 Installation and usage
 
-### Requisitos Previos
+### Prerequisites
 - Python 3.8+
-- No hay dependencias externas (usa librerías estándar)
+- No external dependencies (uses the standard library)
 
-### Instalación
+### Installation
 ```bash
-# Clonar o descargar el proyecto
+# Clone or download the project
 cd search-algorithms
 
-# (Opcional) Crear entorno virtual
+# (Optional) Create a virtual environment
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Instalar dependencias (aunque solo sean librerías estándar)
+# Install dependencies (even though they are only standard libraries)
 pip install -r requirements.txt
 ```
 
-### Ejecución
+### Running
 ```bash
-# Ejecutar el programa principal
+# Run the main program
 python main.py
 
-# Seguir las instrucciones en el menú interactivo
+# Follow the instructions in the interactive menu
 ```
 
-## 🧪 Casos de Prueba
+## 🧪 Test cases
 
-### 1. Grafo Simple
-Red simple de 6 nodos para pruebas rápidas:
+### 1. Simple graph
+Simple 6-node network for quick tests:
 ```
     A --- B --- D
     |     |     |
     C --- E --- F
 ```
 
-**Uso**: Verificación rápida de funcionamiento
+**Use**: Quick functionality check
 
-### 2. Ruta de Ciudades
-Grafo que representa ciudades españolas conectadas con distancias reales:
+### 2. City route
+Graph representing Spanish cities connected with real distances:
 ```
 Madrid ←→ Barcelona
   ↓         ↓
@@ -116,10 +116,10 @@ Valencia ←→ Tarragona
 Alicante
 ```
 
-**Uso**: Problema de búsqueda de ruta con costos
+**Use**: Route-search problem with costs
 
-### 3. Mapa con Costos
-Árbol con pesos variables en las aristas:
+### 3. Map with costs
+Tree with variable edge weights:
 ```
         A
        / \
@@ -128,135 +128,134 @@ Alicante
     D E   F G
 ```
 
-**Uso**: Comparación de algoritmos óptimos vs no-óptimos
+**Use**: Comparison of optimal vs non-optimal algorithms
 
-### 4. Laberinto
-Matriz 3×4 donde 1 = camino válido, 0 = muro:
+### 4. Maze
+3×4 matrix where 1 = valid path, 0 = wall:
 ```
 1 1 0 1
 0 1 1 1
 1 1 0 1
 ```
 
-**Uso**: Problema de búsqueda en espacios de estado discretos
+**Use**: Search problem in discrete state spaces
 
-## 📊 Características Principales
+## 📊 Main features
 
-### Para Cada Búsqueda se Retorna:
-1. **Camino encontrado**: Lista de nodos desde inicio a objetivo
-2. **Nodos explorados**: Conjunto de todos los nodos visitados
-3. **Costo total**: (Solo UCS) Suma de pesos del camino
-4. **Tiempo de ejecución**: Medido en milisegundos
+### For each search it returns:
+1. **Found path**: List of nodes from start to goal
+2. **Explored nodes**: Set of all visited nodes
+3. **Total cost**: (UCS only) Sum of the path weights
+4. **Execution time**: Measured in milliseconds
 
-### Visualización:
-- Información del grafo (nodos, aristas)
-- Resultado detallado por algoritmo
-- Tabla comparativa con todos los algoritmos
-- Colores ANSI para mejor legibilidad
+### Visualization:
+- Graph information (nodes, edges)
+- Detailed result per algorithm
+- Comparison table with all algorithms
+- ANSI colors for better readability
 
-## 📈 Ejemplo de Salida
+## 📈 Example output
 
 ```
 ==================================================
-  RUTA DE CIUDADES  
+  CITY ROUTE  
 ==================================================
 
-📊 Información del Grafo: Ruta de Ciudades
-   Nodos: Madrid, Barcelona, Valencia, Alicante, Tarragona
-   Total de nodos: 5
-   Total de aristas: 5
+📊 Graph information: City Route
+   Nodes: Madrid, Barcelona, Valencia, Alicante, Tarragona
+   Total nodes: 5
+   Total edges: 5
 
-▶ BFS (Búsqueda en Amplitud):
-✓ Camino encontrado:
+▶ BFS (Breadth-First Search):
+✓ Path found:
   Madrid → Valencia → Alicante
-  Longitud del camino: 3
-  Nodos explorados: 3
-  Nodos explorados: Madrid, Valencia, Alicante
+  Path length: 3
+  Explored nodes: 3
+  Explored nodes: Madrid, Valencia, Alicante
   
-[... resultados de otros algoritmos ...]
+[... results of other algorithms ...]
 
 ================================================================================
-COMPARATIVA DE ALGORITMOS
+ALGORITHM COMPARISON
 ================================================================================
 
-Algoritmo               | Camino encontrado | Nodos explorados | Costo    | Tiempo (ms)
+Algorithm               | Path found | Explored nodes | Cost     | Time (ms)
 ────────────────────────────────────────────────────────────────────────────────────
-BFS                    | Sí                | 3                | N/A      | 0.0234
-DFS                    | Sí                | 3                | N/A      | 0.0156
-DLS                    | Sí                | 3                | N/A      | 0.0189
-IDS                    | Sí                | 5                | N/A      | 0.0312
-UCS                    | Sí                | 3                | 560.00   | 0.0401
+BFS                    | Yes               | 3                | N/A      | 0.0234
+DFS                    | Yes               | 3                | N/A      | 0.0156
+DLS                    | Yes               | 3                | N/A      | 0.0189
+IDS                    | Yes               | 5                | N/A      | 0.0312
+UCS                    | Yes               | 3                | 560.00   | 0.0401
 ```
 
-## 🔄 Comparación Entre Algoritmos
+## 🔄 Algorithm comparison
 
-| Algoritmo | Completa | Óptima | Memoria | Tiempo | Mejor para |
-|-----------|----------|--------|---------|--------|-----------|
-| BFS       | ✓        | ✓      | Alto    | Medio  | Grafos pequeños |
-| DFS       | ✓        | ✗      | Bajo    | Rápido | Búsqueda exhaustiva |
-| DLS       | Parcial  | ✗      | Bajo    | Rápido | Limitar profundidad |
-| IDS       | ✓        | ✓      | Medio   | Medio  | Espacios grandes |
-| UCS       | ✓        | ✓      | Alto    | Lento  | Grafos ponderados |
+| Algorithm | Complete | Optimal | Memory | Time   | Best for |
+|-----------|----------|---------|--------|--------|----------|
+| BFS       | ✓        | ✓       | High   | Medium | Small graphs |
+| DFS       | ✓        | ✗       | Low    | Fast   | Exhaustive search |
+| DLS       | Partial  | ✗       | Low    | Fast   | Limiting depth |
+| IDS       | ✓        | ✓       | Medium | Medium | Large spaces |
+| UCS       | ✓        | ✓       | High   | Slow   | Weighted graphs |
 
-## 💡 Notas Importantes
+## 💡 Important notes
 
 ### BFS vs DFS
-- **BFS**: Garantiza camino más corto (número de pasos)
-- **DFS**: Más eficiente en memoria, pero no garantiza optimalidad
+- **BFS**: Guarantees the shortest path (number of steps)
+- **DFS**: More memory-efficient, but does not guarantee optimality
 
 ### IDS vs BFS
-- **IDS**: Usa menos memoria que BFS
-- **BFS**: Más rápido que IDS
-- Ambos encuentran la solución óptima
+- **IDS**: Uses less memory than BFS
+- **BFS**: Faster than IDS
+- Both find the optimal solution
 
 ### UCS vs BFS
-- **BFS**: Óptimo solo si todos los costos son iguales
-- **UCS**: Óptimo con cualquier costo positivo
+- **BFS**: Optimal only if all costs are equal
+- **UCS**: Optimal with any positive cost
 
-### DLS y Límites
-- Útil cuando se sabe dónde buscar
-- Evita búsqueda infinita en grafos cíclicos
+### DLS and limits
+- Useful when you know where to search
+- Avoids infinite search on cyclic graphs
 
-## 🎓 Conceptos Educativos
+## 🎓 Educational concepts
 
-El proyecto demuestra:
-- Estructuras de datos (cola, pila, heap)
-- Reconstrucción de caminos
-- Métricas de búsqueda
-- Análisis comparativo
-- Visualización de algoritmos
+The project demonstrates:
+- Data structures (queue, stack, heap)
+- Path reconstruction
+- Search metrics
+- Comparative analysis
+- Algorithm visualization
 
-## ✅ Checklist de Requisitos
+## ✅ Requirements checklist
 
-- [x] Implementar BFS correctamente
-- [x] Implementar DFS correctamente
-- [x] Implementar DLS con límite de profundidad
-- [x] Implementar IDS con iteración de límites
-- [x] Implementar UCS con cola de prioridad
-- [x] Definir estado inicial y objetivo
-- [x] Visualizar ruta encontrada
-- [x] Mostrar nodos explorados
-- [x] Indicar costo total (UCS)
-- [x] Comparar resultados entre algoritmos
-- [x] Usar estructuras adecuadas para cada algoritmo
-- [x] Múltiples casos de prueba
-- [x] Documentación completa
+- [x] Implement BFS correctly
+- [x] Implement DFS correctly
+- [x] Implement DLS with a depth limit
+- [x] Implement IDS with limit iteration
+- [x] Implement UCS with a priority queue
+- [x] Define initial and goal state
+- [x] Visualize the found route
+- [x] Show explored nodes
+- [x] Report total cost (UCS)
+- [x] Compare results across algorithms
+- [x] Use suitable structures for each algorithm
+- [x] Multiple test cases
+- [x] Complete documentation
 
-## 📝 Licencia
+## 📝 License
 
-Este proyecto es de uso educativo.
+This project is for educational use.
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
-Implementación de algoritmos de búsqueda para propósitos educativos.
+Implementation of search algorithms for educational purposes.
 
 ---
 
-**¡Disfruta explorando algoritmos de búsqueda!** 🎯
+**Enjoy exploring search algorithms!** 🎯
 
-## Aplicaciones
+## Applications
 
-En [`aplicaciones/entrega_paquetes.ipynb`](aplicaciones/entrega_paquetes.ipynb)
-los algoritmos del paquete se aplican a un problema real: planificar la entrega
-de paquetes comparando estrategias de busqueda clasica. El notebook incluye los
-resultados ejecutados.
+In [`aplicaciones/entrega_paquetes.ipynb`](aplicaciones/entrega_paquetes.ipynb)
+the package's algorithms are applied to a real problem: planning package delivery
+by comparing classic search strategies. The notebook includes the executed results.
